@@ -51,11 +51,11 @@ generate_open_command() {
 		echo "$(command_generator "open")"
 	elif is_cygwin; then
 		echo "$(command_generator "cygstart")"
-	elif command_exists "xdg-open"; then
-		echo "$(command_generator "xdg-open")"
+	elif command_exists "firefox-developer-edition"; then
+		echo "$(command_generator "firefox-developer-edition")"
 	else
-		# error command for Linux machines when 'xdg-open' not installed
-		"$CURRENT_DIR/scripts/tmux_open_error_message.sh" "xdg-open"
+		# error command for Linux machines when 'firefox-developer-edition' not installed
+		"$CURRENT_DIR/scripts/tmux_open_error_message.sh" "firefox-developer-edition"
 	fi
 }
 
@@ -65,11 +65,11 @@ generate_open_search_command() {
 		echo "$(search_command_generator "open" "$engine")"
 	elif is_cygwin; then
 		echo "$(command_generator "cygstart")"
-	elif command_exists "xdg-open"; then
-		echo "$(search_command_generator "xdg-open" "$engine")"
+	elif command_exists "firefox-developer-edition"; then
+		echo "$(search_command_generator "firefox-developer-edition" "$engine")"
 	else
-		# error command for Linux machines when 'xdg-open' not installed
-		"$CURRENT_DIR/scripts/tmux_open_error_message.sh" "xdg-open"
+		# error command for Linux machines when 'firefox-developer-edition' not installed
+		"$CURRENT_DIR/scripts/tmux_open_error_message.sh" "firefox-developer-edition"
 	fi
 }
 
